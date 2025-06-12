@@ -9,7 +9,7 @@ def enviar_email(destinatario, assunto, corpo):
     email.set_content(corpo)
 
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-        smtp.login('fonsecaanaquiriw@gmail.com', 'Sutmj akeh evsy emln')  # <- Substitua aqui!
+        smtp.login('fonsecaanaquiriw@gmail.com ', 'Sutmj akeh evsy emln')  # <- Substitua aqui!
         smtp.send_message(email)
 
 def processar_agendamento():
