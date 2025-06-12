@@ -4,22 +4,17 @@ pipeline {
     stages {
         stage('Clonar projeto') {
             steps {
-                git 'https://github.com/WesleyAnaquiri/agendamento-2.0.git'
-
+                git 'https://github.com/SEU_USUARIO/meu-projeto.git'
             }
         }
         stage('Build Docker') {
             steps {
-                script {
-                    docker.build('agendamento-app')
-                }
+                sh 'docker build -t agendamento-app .'
             }
         }
-        stage('Executar Container') {
+        stage('Run Container') {
             steps {
-                script {
-                    docker.image('agendamento-app').run()
-                }
+                sh 'docker run agendamento-app'
             }
         }
     }
