@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Clonar projeto') {
             steps {
-                git 'https://github.com/SEU_USUARIO/meu-projeto.git'
+                git 'https://github.com/WesleyAnaquiri/agendamento-2.0.git'
+
             }
         }
         stage('Build Docker') {
